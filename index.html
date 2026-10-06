@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Наша команда — Северный Ветер</title>
+<meta name="description" content="Знакомьтесь с командой студии «Северный Ветер». Все данные на странице вымышлены.">
+<style>
+:root{--bg:#0f1420;--card:#171e2e;--text:#e8ecf4;--muted:#9aa5bb;--accent:#5ee0c0;--line:#252e44}
+@media (prefers-color-scheme:light){:root{--bg:#f5f7fb;--card:#fff;--text:#161b29;--muted:#59627a;--accent:#0b9c7b;--line:#e1e6f0}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header{padding:28px 0 8px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;letter-spacing:.02em}.logo b{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:14px}nav a:hover{color:var(--accent)}
+.hero{padding:70px 0 50px;text-align:center}
+.hero h1{font-size:clamp(36px,7vw,64px);line-height:1.1;margin:0 0 16px}
+.hero h1 span{color:var(--accent)}
+.hero p{color:var(--muted);max-width:620px;margin:0 auto;font-size:18px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin:40px 0}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;text-align:center}
+.stat b{display:block;font-size:34px;color:var(--accent)}.stat span{color:var(--muted);font-size:14px}
+h2{font-size:28px;margin:60px 0 24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);border-color:var(--accent)}
+.ava{width:72px;height:72px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:24px;color:#0f1420;margin-bottom:16px}
+.card h3{margin:0}.role{color:var(--accent);font-size:14px;margin:2px 0 10px}
+.card p{color:var(--muted);font-size:14px;margin:0 0 14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}.tags span{font-size:12px;border:1px solid var(--line);border-radius:99px;padding:2px 10px;color:var(--muted)}
+.values{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.values div{padding:20px;border-left:3px solid var(--accent);background:var(--card);border-radius:0 12px 12px 0}
+.values h4{margin:0 0 6px}.values p{margin:0;color:var(--muted);font-size:14px}
+.join{margin:70px 0 40px;padding:40px;text-align:center;border-radius:24px;background:linear-gradient(135deg,var(--accent),#4aa8ff);color:#0f1420}
+.join h2{margin:0 0 10px}.join a{display:inline-block;margin-top:14px;background:#0f1420;color:#fff;padding:12px 26px;border-radius:99px;text-decoration:none;font-weight:600}
+footer{padding:30px 0 50px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div class="logo">Северный<b>Ветер</b></div><nav><a href="#team">Команда</a><a href="#values">Ценности</a><a href="#join">Вакансии</a></nav></header>
+
+<section class="hero">
+<h1>Люди, которые делают <span>«Северный Ветер»</span></h1>
+<p>Двенадцать специалистов из шести городов строят цифровые продукты, которыми приятно пользоваться. Познакомьтесь с нами.</p>
+</section>
+
+<section class="stats">
+<div class="stat"><b>12</b><span>человек в команде</span></div>
+<div class="stat"><b>6</b><span>городов</span></div>
+<div class="stat"><b>47</b><span>запущенных проектов</span></div>
+<div class="stat"><b>2017</b><span>год основания</span></div>
+</section>
+
+<h2 id="team">Команда</h2>
+<section class="grid" id="grid"></section>
+
+<h2 id="values">Во что мы верим</h2>
+<section class="values">
+<div><h4>Честность</h4><p>Говорим как есть: о сроках, рисках и собственных ошибках.</p></div>
+<div><h4>Качество в деталях</h4><p>Мелочи складываются в ощущение продукта.</p></div>
+<div><h4>Свобода и ответственность</h4><p>Гибкий график и удалёнка, но результат — на нас.</p></div>
+<div><h4>Рост</h4><p>Бюджет на обучение и конференции у каждого сотрудника.</p></div>
+</section>
+
+<section class="join" id="join">
+<h2>Хотите к нам?</h2>
+<p>Открыты вакансии: Senior Frontend, QA-инженер, Продуктовый аналитик.</p>
+<a href="mailto:hello@severny-veter.example">hello@severny-veter.example</a>
+</section>
+
+<footer>© 2026 «Северный Ветер». Тестовый сайт: все имена, должности и данные вымышлены, совпадения случайны.</footer>
+</div>
+<script>
+const team=[
+["Алексей Морозов","Генеральный директор","Основал студию в 2017-м. Любит горные лыжи и длинные стратегические сессии.",["Стратегия","Продажи"],"#5ee0c0"],
+["Мария Ковалёва","Технический директор","Двадцать лет в разработке. Верит в простую архитектуру и хороший код-ревью.",["Архитектура","Rust","Go"],"#4aa8ff"],
+["Дмитрий Орлов","Руководитель проектов","Превращает хаос требований в понятный план и держит сроки.",["Agile","Риски"],"#ffb86b"],
+["Елена Соколова","Ведущий дизайнер","Рисует интерфейсы, в которых не нужно читать инструкцию.",["UX","Figma","Дизайн-системы"],"#ff8fb1"],
+["Игорь Лебедев","Senior Backend","Строит API, которые не падают в пятницу вечером.",["Python","PostgreSQL"],"#b79cff"],
+["Анна Волкова","Frontend-разработчик","Анимации, доступность и скорость загрузки — её три слона.",["React","TypeScript"],"#5ee0c0"],
+["Тимур Нуриев","DevOps-инженер","Автоматизирует всё, что делал руками больше двух раз.",["Kubernetes","CI/CD"],"#4aa8ff"],
+["Ольга Гринёва","QA-инженер","Находит баги раньше пользователей и немного гордится этим.",["Автотесты","Playwright"],"#ffb86b"],
+["Сергей Белов","Мобильный разработчик","Делает приложения, которые одинаково хороши на iOS и Android.",["Flutter","Kotlin"],"#ff8fb1"],
+["Наталья Фомина","Продуктовый аналитик","Знает, какую кнопку нажимают чаще, и почему.",["SQL","A/B-тесты"],"#b79cff"],
+["Артём Жуков","Копирайтер","Пишет тексты, которые читают до конца. Даже договоры.",["Тексты","UX-writing"],"#5ee0c0"],
+["Виктория Лисина","HR и офис-менеджер","Заботится, чтобы в команде было тепло, а в холодильнике — вкусно.",["Культура","Найм"],"#4aa8ff"]];
+const g=document.getElementById('grid');
+team.forEach(([n,r,b,t,c])=>{
+ const i=n.split(' ').map(w=>w[0]).join('');
+ const d=document.createElement('article');d.className='card';
+ d.innerHTML=`<div class="ava" style="background:${c}">${i}</div><h3>${n}</h3><div class="role">${r}</div><p>${b}</p><div class="tags">${t.map(x=>`<span>${x}</span>`).join('')}</div>`;
+ g.appendChild(d);
+});
+</script>
+</body>
+</html>
